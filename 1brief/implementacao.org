@@ -1,0 +1,95 @@
+* Pontos principais
+- Servidor com base de dados centralizada(?)[1]
+- Base de dados específica no servidor da empresa (que gere os utilizadores,
+opções disponíveis, etc.)
+- Uso de APIs para automatização de comunicação/interação com:
+  + Companhias aéreas
+  + Hotéis
+  + Companhias de transporte público terrestre (metro, autocarro, táxi, etc.)
+
+* Personalização 
+- Companhias aéreas
+- Tipos de voos (e.g. classe)
+- Companhias hoteleiras
+- Tipos de hoteis e estadias (com/sem refeições, estrelas, etc)
+- Tipos de transporte público
+
+* Interface utilizador
+O software vai integrar vários tipos conhecidos de autenticação
+de empresas (Enterprise Authentication) tanto para segurança como
+para conveniência. No caso em que a empresa não usufrua de um destes
+serviços ou que não exista uma implementação para o que possuí, então
+será necessário criar contas de utilizador individuais de maneira a
+permitir a autenticação.
+
+** Autenticação
+Caso a empresa possua um método de autenticação suportado pelo software
+o utilizador não terá de fazer nada. Caso contrário, irá ser
+disponibilizado um formulário que recebe como input as credenciais
+necessárias à autenticação;
+
+**  Perfil
+Sendo que um dos pontos principais do software é o facto de poder
+se adaptar aos gostos pessoais do utilizador irá ser disponibilizada
+uma interface onde será possível escolher as várias [[Personalização][preferências pessoais]].
+
+** Escolha de viagem
+Interface permite definir uma viagem a efetuar com as seguintes opções:
+- Motivo da viagem (reunião, etc.)
+  - Dependendo do tipo da viagem pode existir a opção de definir a data
+    e o local do acontecimento (e.g. reunião) 
+- /Opiconal:/ Opções de companhia aérea e voo
+- Data de ida 
+- /Opcional:/ Data de vinda
+- /Opcional:/ Estadia
+  - /Opcional:/ Opções de estadia
+
+Depois de feita a pesquisa irão aparecer várias recomendações geradas
+pelo software.
+Nos casos em que a estadia e o local do acontecimento estejam
+suficientemente afastados (ou se o utilizador assim o desejar) 
+o programa irá perguntar se é desejado o aluguer de transporte assim
+como as opções referentes a este.
+
+Finalmente, após a escolha de uma das recomendações será pedida a
+confirmação do utilizador.
+
+/Nota: No caso em que é possível a escolha de várias opções e que o utilizador não preencha nenhuma, o software irá utilizar as preferências pessoais deste/
+
+* Interface administrador
+Os administradores serão entidades diferentes dos utilizadores.
+Qualquer utilizador poderá ser um administrador desde que tenha acesso
+às credenciais necessárias para aceder à interface de administração.
+
+** Autenticação
+A autenticação dos administradores será feita à parte da autenticação
+dos utilizadores normais, com credenciais específicas.
+
+Cada licença empresarial do software incluíra uma conta administrativa
+por defeito que poderá ser usada como bootstrap do resto.
+
+** Definições gerais
+Irá ser disponibilizada uma interface onde será possível definir
+que [[Personalização][opções]] estarão disponíveis para todos os utilizadores, tanto na escolha
+da viagem como na personalização do perfil.
+Opção para permitir updates à aplicação ou que versão da aplicação é
+que os utilizadores podem usar(?)[2]
+
+** Definições pessoais
+Irá também ser disponibilizada uma listagem de todos os utilizadores
+onde será possível, individualmente, definir as [[Personalização][opções]] disponíveis.
+
+** Histórico
+Histórico de viagens com várias formas de ordenação de informação.
+
+* Footnotes
+[1] Temos a opção de:
+- Gerirmos nós um servidor geral que contém toda a
+informação sobre as companhias aéreas, transportes, hotéis, etc.
+_OU_
+- Incluir esta informação com a aplicação e a atualização da informação
+é feita a partir de updates à aplicação (este update pode ser automático
+se houver acesso ao nosso servidor e se a empresa assim o desejar).
+
+[2] Não sei até que ponto é que updates à aplicação poderão ter
+consequências negativas.
