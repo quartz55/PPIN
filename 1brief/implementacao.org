@@ -1,7 +1,6 @@
 * Pontos principais
 - Servidor com base de dados centralizada(?)[1]
-- Base de dados específica no servidor da empresa (que gere os utilizadores,
-opções disponíveis, etc.)
+- Base de dados específica no servidor da empresa (que gere os utilizadores, opções disponíveis, etc.)
 - Uso de APIs para automatização de comunicação/interação com:
   + Companhias aéreas
   + Hotéis
@@ -84,12 +83,8 @@ Histórico de viagens com várias formas de ordenação de informação.
 
 * Footnotes
 [1] Temos a opção de:
-- Gerirmos nós um servidor geral que contém toda a
-informação sobre as companhias aéreas, transportes, hotéis, etc.
+- Gerirmos nós um servidor geral que contém toda a informação sobre as companhias aéreas, transportes, hotéis, etc.
 _OU_
-- Incluir esta informação com a aplicação e a atualização da informação
-é feita a partir de updates à aplicação (este update pode ser automático
-se houver acesso ao nosso servidor e se a empresa assim o desejar).
-
+- Incluir esta informação com a aplicação e a atualização da informação é feita a partir de updates à aplicação (este update pode ser automático se houver acesso ao nosso servidor e se a empresa assim o desejar). 
 [2] Não sei até que ponto é que updates à aplicação poderão ter
 consequências negativas.
